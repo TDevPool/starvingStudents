@@ -1,0 +1,113 @@
+:root {
+  --color-primary: black;
+  --color-secondary: white;
+  --color-accent: #1e3d7c;
+  --compliment-accent: #994709;
+  --font-size: 4vw;
+  --border-radius: 10px;
+}
+
+body {
+  display: grid;
+  height: 97vh;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  font-family: system-ui, sans-serif;
+}
+
+header {
+  background: var(--color-accent);
+  color: var(--color-secondary);
+  grid-column: 1 / 4;
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  font-size: var(--font-size);
+}
+
+.sidebar {
+  background: var(--color-secondary);
+  grid-column: 1 / 2;
+  height: auto;
+  max-width: 25vw;
+}
+
+main {
+  background: var(--color-secondary);
+  grid-column: 2 / 3;
+}
+
+/* footer {
+  background: var(--color-accent);
+  text-align: center;
+  grid-column: 1 / 4;
+} */
+
+/* button {
+  color: var(--color-secondary);
+  background-color: var(--color-accent);
+  height: auto;
+  width: 100%;
+  min-height: 3rem;
+  font-size: 90%;
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  border-radius: 10px;
+  margin: 0 0 2vh 0;
+} */
+
+@media screen and (min-width: 800px) {
+  header {
+    font-size: 1.5vw !important;
+  }
+  a {
+    font-size: 1.5vw !important;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  header {
+    display: none;
+  }
+}
+
+#map {
+  height: 100%;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.nav {
+  overflow: hidden;
+  background: var(--color-accent);
+  grid-column: 1 / 4;
+}
+
+/* Style the links inside the navigation bar */
+.nav a {
+  display: inline-flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1vh 1vw;
+  margin-top: 4px;
+  text-decoration: none;
+  font-size: var(--font-size);
+  border-radius: var(--border-radius);
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: var(--compliment-accent);
+  color: white;
+}
+
+/* Add a background on nav links */
+.nav a:hover {
+  background-color: var(--compliment-accent);
+  color: var(--color-secondary);
+}
+.logout:hover {
+  color: var(--color-secondary);
+  background-color: rgb(165, 0, 0) !important;
+}
+.ag-theme-alpine {
+  overflow: hidden;
+}
