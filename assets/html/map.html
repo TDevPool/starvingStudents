@@ -8,23 +8,28 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta content="utf-8" http-equiv="encoding" />
     <title>Starving Students</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/stylish.css" />
+    <link rel="stylesheet" type="text/css" href="../css/stylish.css" />
+    <link rel="shortcut icon" type="image/jpg" href="../css/burger.png" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="./assets/js/App.js"></script>
+    <script src="../js/App.js"></script>
   </head>
-  <header>
+  <header class="head">
     Starving Students
     <div class="nav" id="navBar">
-      <a href="index.html" class="active">Map</a>
-      <!-- <a href="popular.html">Popular</a> -->
+      <a href="map.html" class="active">Map</a>
       <a href="grid.html">List</a>
+      <a href="about.html">About</a>
+      <!-- <a href="popular.html">Popular</a> -->
       <!-- <a href="manage.html">Manage Events</a> -->
-      <!-- <a href="login.html" onclick="logOut()" class="logout">Logout</a> -->
+      <a href="../../index.html" onclick="logOut()" class="logout">Logout</a>
     </div>
   </header>
 
-  <div class="sidebar" id="sidenav">
-    <li><button onclick="location.href='popular.html';">Log In</button></li>
-  </div>
-  <main>This is not done</main>
+  <main>
+    <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzr586TXljCXIHM-d4APVVIijry9rL8yo&callback=initMap"
+      async
+    ></script>
+  </main>
 </html>

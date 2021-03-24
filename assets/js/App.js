@@ -73,21 +73,23 @@ function initMap() {
 }
 
 function markerClicked() {
-  alert("not supported yet");
+  alert(
+    "In the future this will redirect you to a details page about the event"
+  );
 }
 
 function addMarker() {
   markers.push({ lat: 40.7971165, lng: -77.871483 });
 }
 function logOut() {
-  console.log("logged out");
-  window.location = "./index.html";
+  alert("Not Yet supported");
+  // window.location = "./index.html";
 }
 
 const columnDefs = [
   { headerName: "Place", field: "name" },
   { headerName: "Food Type", field: "foodType", width: 210 },
-  { headerName: "When", field: "when", type: "dateColumn" },
+  { headerName: "When", field: "when" },
 ];
 
 // specify the data
@@ -100,19 +102,16 @@ const gridOptions = {
   defaultColDef: {
     resizable: true,
     filter: "agTextColumnFilter",
+    sortable: true,
     // floatingFilter: true,
   },
 };
 
 // setup the grid after the page has finished loading
-document.addEventListener("DOMContentLoaded", () => {
-  const gridDiv = document.querySelector("#myGrid");
-  new agGrid.Grid(gridDiv, gridOptions);
-  gridOptions.api.sizeColumnsToFit();
-});
-//7f5d842396486cb2
-//AIzaSyCzr586TXljCXIHM-d4APVVIijry9rL8yo
-
-// src =
-//   "https://maps.googleapis.com/maps/api/js?key=AIzaSyCzr586TXljCXIHM-d4APVVIijry9rL8yo&map_ids=7f5d842396486cb2&callback=initMap";
-// async;
+// console.log(window.location.href.search("grid.tml"));
+if (window.location.href.search("grid.html") != -1)
+  document.addEventListener("DOMContentLoaded", () => {
+    const gridDiv = document.querySelector("#myGrid");
+    new agGrid.Grid(gridDiv, gridOptions);
+    gridOptions.api.sizeColumnsToFit();
+  });

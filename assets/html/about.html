@@ -9,23 +9,52 @@
     <meta content="utf-8" http-equiv="encoding" />
     <title>Starving Students</title>
     <link rel="stylesheet" type="text/css" href="../css/stylish.css" />
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="../css/burger.png" />
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
+    <!-- <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script> -->
     <script src="../js/App.js"></script>
   </head>
-  <header>
+  <header class="head">
     Starving Students
     <div class="nav" id="navBar">
-      <a href="../../index.html">Map</a>
+      <a href="map.html">Map</a>
       <a href="grid.html">List</a>
       <a href="about.html" class="active">About</a>
+      <a onclick="logOut()" class="logout">Logout</a>
       <!-- <a href="popular.html">Popular</a> -->
       <!-- <a href="manage.html">Manage Events</a> -->
       <!-- <a href="login.html" onclick="logOut()" class="logout">Logout</a> -->
     </div>
   </header>
 
-  <main>
-    <p>This is the about section</p>
+  <main class="about">
+    <h2>Welcome!</h2>
+    <p style="margin-top: 0">
+      This is Starving Students. This concept of this project and its
+      feasibility/utility started my final semester at Penn State in
+      collaboration with my team. This was recently developed by me, Aaron
+      Brvenik. An ongoing project, I intend to make this fully featured. As it
+      stands this is just a front end.
+    </p>
+    <p>
+      The purpose of this application is to centralize information about
+      on-campus free food events, specifically when, where, and what kind of
+      food is at the event.
+    </p>
+    <p>
+      This website is responsive and built with integration of the google maps
+      API, as well as Ag-Grid.
+    </p>
+    <p>
+      Source Code for this app can be seen in my
+      <a href="https://github.com/TDevPool/starvingStudents">organization</a>, 
+      <a href="https://github.com/acb5764">Github</a>, or <a href="http://aaron.brvenik.com">portfolio</a>. A full set of
+      documentation can be seen
+      <a
+        href="https://docs.google.com/document/d/1QO9ws9063gWwb6Fr9ApubMYMjXx-8_eo8WV2i2iqMW8/edit?usp=sharing"
+        >here</a>.
+      <p>Thanks for stopping by!</p>
+      
+    </p>
   </main>
 </html>

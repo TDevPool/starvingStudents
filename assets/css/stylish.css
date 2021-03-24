@@ -36,43 +36,35 @@ main {
   grid-column: 2 / 3;
 }
 
-/* footer {
-  background: var(--color-accent);
-  text-align: center;
-  grid-column: 1 / 4;
-} */
-
-/* button {
-  color: var(--color-secondary);
-  background-color: var(--color-accent);
-  height: auto;
-  width: 100%;
-  min-height: 3rem;
-  font-size: 90%;
-  box-sizing: border-box;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  border-radius: 10px;
-  margin: 0 0 2vh 0;
+/* button { this needs to be a class as to not inadvertantly mess up the map 
+  background-color: var(--compliment-accent);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  border-radius: var(--border-radius);
 } */
 
 @media screen and (min-width: 800px) {
-  header {
-    font-size: 1.5vw !important;
+  .head {
+    font-size: 2vw !important;
   }
-  a {
-    font-size: 1.5vw !important;
+  .nav a {
+    font-size: 2vw !important;
   }
 }
 
 @media screen and (max-height: 400px) {
-  header {
+  .nav {
     display: none;
   }
 }
 
 #map {
   height: 100%;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  /* border-radius: 0 0 var(--border-radius) var(--border-radius); */
 }
 
 .nav {
@@ -108,6 +100,18 @@ main {
   color: var(--color-secondary);
   background-color: rgb(165, 0, 0) !important;
 }
+.loginDialog {
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(var(--color-accent), var(--color-primary));
+}
 .ag-theme-alpine {
   overflow: hidden;
+}
+.about {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  text-indent: 25px;
+  line-height: 25px;
 }
